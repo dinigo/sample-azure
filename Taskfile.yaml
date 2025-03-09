@@ -1,0 +1,10 @@
+version: '3'
+
+tasks:
+  infra:apply:
+    cmd: terraform apply -auto-approve
+
+
+  front:build:
+    dir: front
+    cmd: npm run build
