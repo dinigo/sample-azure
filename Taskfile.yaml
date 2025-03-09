@@ -4,7 +4,20 @@ tasks:
   infra:apply:
     cmd: terraform apply -auto-approve
 
-
   front:build:
     dir: front
     cmd: npm run build
+
+  front:run:
+    dir: front
+    cmd: npm run dev
+
+  back:build:
+    dir: back
+    cmd: mvn package
+
+  back:run:
+    dir: back
+    cmds:
+      - task: back:build
+      - mvn azure-functions:run
