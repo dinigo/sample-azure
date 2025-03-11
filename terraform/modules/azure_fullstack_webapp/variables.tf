@@ -1,6 +1,5 @@
 variable "resource_group_location" {
   type    = string
-  default = "westeurope"
 }
 
 variable "repository_token" {
