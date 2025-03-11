@@ -1,3 +1,3 @@
 output "resource_group_name" {
-  value = azurerm_resource_group.rg.name
+  value = module.sartorius_demo_fullstack_webapp.resource_group_name
 }
