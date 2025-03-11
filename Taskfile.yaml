@@ -21,3 +21,8 @@ tasks:
     cmds:
       - task: back:build
       - mvn azure-functions:run
+
+  back:deploy:
+    dotenv: [ '.envrc' ]
+    dir: back
+    cmd: mvn azure-functions:deploy
